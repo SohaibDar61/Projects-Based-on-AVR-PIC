@@ -1,0 +1,580 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"26 SSD.c
+[; ;SSD.c: 26: static tSSD_INFO ssd_data[(4)];
+[c E2 0 1 2 3 4 5 6 7 8 9 10 .. ]
+[n E2 . SSD_0 SSD_1 SSD_2 SSD_3 SSD_4 SSD_5 SSD_6 SSD_7 SSD_8 SSD_9 SSD_NULL  ]
+"15
+[; ;SSD.c: 15: typedef struct {
+[s S97 `*uc 1 `*uc 1 `*uc 1 `*uc 1 `uc 1 `E2 1 ]
+[n S97 . data_direction_reg data_value_reg ctrl_direction_reg ctrl_value_reg ctrl_pin symbol ]
+"27
+[; ;SSD.c: 27: static tSSD current_ssd = ssd_minute_units;
+[c E15 0 1 2 3 .. ]
+[n E15 . ssd_minute_units ssd_minute_tens ssd_hour_units ssd_hour_tens  ]
+"28
+[; ;SSD.c: 28: static tDotState dot_state;
+[c E21 0 1 .. ]
+[n E21 . DOT_OFF DOT_ON  ]
+"38
+[; ;SSD.c: 38: static void ssd_schematic_init(void);
+[v _ssd_schematic_init `(v ~T0 @X0 0 sf ]
+"42 ./SSD.h
+[; ;./SSD.h: 42: void ssd_display(tSSD,tSSD_SYMBOL);
+[v _ssd_display `(v ~T0 @X0 0 ef2`E15`E2 ]
+"41 SSD.c
+[; ;SSD.c: 41: static void ssd_off(tSSD);
+[v _ssd_off `(v ~T0 @X0 0 sf1`E15 ]
+"40
+[; ;SSD.c: 40: static void ssd_on(tSSD);
+[v _ssd_on `(v ~T0 @X0 0 sf1`E15 ]
+"31 ./MICRO_CONTROLLER.h
+[; ;./MICRO_CONTROLLER.h: 31:     struct{
+[s S96 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S96 . BIT0 BIT1 BIT2 BIT3 BIT4 BIT5 BIT6 BIT7 ]
+"29
+[; ;./MICRO_CONTROLLER.h: 29: typedef union {
+[u S95 `uc 1 `S96 1 ]
+[n S95 . Reg Bits ]
+"39 SSD.c
+[; ;SSD.c: 39: static void dot_display(tDotState);
+[v _dot_display `(v ~T0 @X0 0 sf1`E21 ]
+"5 ./config.h
+[p x FOSC = HS ]
+"6
+[p x WDTE = OFF ]
+"7
+[p x PWRTE = ON ]
+"8
+[p x BOREN = ON ]
+"9
+[p x LVP = OFF ]
+"10
+[p x CPD = OFF ]
+"11
+[p x WRT = OFF ]
+"12
+[p x CP = OFF ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"26 SSD.c
+[; ;SSD.c: 26: static tSSD_INFO ssd_data[(4)];
+[v _ssd_data `S97 ~T0 @X0 -> 4 `i s ]
+"27
+[; ;SSD.c: 27: static tSSD current_ssd = ssd_minute_units;
+[v _current_ssd `E15 ~T0 @X0 1 s ]
+[i _current_ssd
+. `E15 0
+]
+"28
+[; ;SSD.c: 28: static tDotState dot_state;
+[v _dot_state `E21 ~T0 @X0 1 s ]
+"31
+[; ;SSD.c: 31: static tByte ssd_decoder[(11)] = {0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F,0X00};
+[v _ssd_decoder `uc ~T0 @X0 -> 11 `i s ]
+[i _ssd_decoder
+:U ..
+-> -> 63 `i `uc
+-> -> 6 `i `uc
+-> -> 91 `i `uc
+-> -> 79 `i `uc
+-> -> 102 `i `uc
+-> -> 109 `i `uc
+-> -> 125 `i `uc
+-> -> 7 `i `uc
+-> -> 127 `i `uc
+-> -> 111 `i `uc
+-> -> 0 `i `uc
+..
+]
+"44
+[; ;SSD.c: 44: void ssd_init(tSSD ssd){
+[v _ssd_init `(v ~T0 @X0 1 ef1`E15 ]
+{
+[e :U _ssd_init ]
+[v _ssd `E15 ~T0 @X0 1 r1 ]
+[f ]
+"46
+[; ;SSD.c: 46:         ssd_schematic_init();
+[e ( _ssd_schematic_init ..  ]
+"48
+[; ;SSD.c: 48:     ((*(ssd_data[ssd].data_direction_reg)) = ((((0))) ? (~(0)) : ((0))));
+[e = *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 0 -> ? != -> 0 `i -> 0 `i : ~ -> 0 `i -> 0 `i `uc ]
+"50
+[; ;SSD.c: 50:     ssd_display(ssd,SSD_NULL);
+[e ( _ssd_display (2 , _ssd . `E2 10 ]
+"53
+[; ;SSD.c: 53:     ((*(ssd_data[ssd].ctrl_direction_reg)) = ((*(ssd_data[ssd].ctrl_direction_reg) & (~(1 << ssd_data[ssd].ctrl_pin))) | (((0)) << ssd_data[ssd].ctrl_pin)));
+[e = *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 2 -> | & -> *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 2 `i ~ << -> 1 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i << -> 0 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i `uc ]
+"54
+[; ;SSD.c: 54:     (((*(ssd_data[ssd].ctrl_value_reg)) = ((*(ssd_data[ssd].ctrl_value_reg) & (~(1 << ssd_data[ssd].ctrl_pin))) | (((0)) << ssd_data[ssd].ctrl_pin))));
+[e = *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 3 -> | & -> *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 3 `i ~ << -> 1 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i << -> 0 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i `uc ]
+"57
+[; ;SSD.c: 57: }
+[e :UE 98 ]
+}
+"58
+[; ;SSD.c: 58: void ssd_setSymbol(tSSD ssd, tSSD_SYMBOL symbol){
+[v _ssd_setSymbol `(v ~T0 @X0 1 ef2`E15`E2 ]
+{
+[e :U _ssd_setSymbol ]
+[v _ssd `E15 ~T0 @X0 1 r1 ]
+[v _symbol `E2 ~T0 @X0 1 r2 ]
+[f ]
+"59
+[; ;SSD.c: 59:     ssd_data[ssd].symbol = symbol;
+[e = . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 5 _symbol ]
+"60
+[; ;SSD.c: 60: }
+[e :UE 99 ]
+}
+"61
+[; ;SSD.c: 61: tSSD_SYMBOL ssd_getSymbol(tSSD ssd){
+[v _ssd_getSymbol `(E2 ~T0 @X0 1 ef1`E15 ]
+{
+[e :U _ssd_getSymbol ]
+[v _ssd `E15 ~T0 @X0 1 r1 ]
+[f ]
+"62
+[; ;SSD.c: 62:     return ssd_data[ssd].symbol;
+[e ) . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 5 ]
+[e $UE 100  ]
+"63
+[; ;SSD.c: 63: }
+[e :UE 100 ]
+}
+"65
+[; ;SSD.c: 65: void ssd_update(void){
+[v _ssd_update `(v ~T0 @X0 1 ef ]
+{
+[e :U _ssd_update ]
+[f ]
+"66
+[; ;SSD.c: 66:     static tByte ssd_update_counter = 0;
+[v F930 `uc ~T0 @X0 1 s ssd_update_counter ]
+[i F930
+-> -> 0 `i `uc
+]
+"68
+[; ;SSD.c: 68:     ssd_update_counter += (5);
+[e =+ F930 -> -> 5 `i `uc ]
+"70
+[; ;SSD.c: 70:     if (ssd_update_counter == (5)){
+[e $ ! == -> F930 `i -> 5 `i 102  ]
+{
+"71
+[; ;SSD.c: 71:         ssd_update_counter = 0;
+[e = F930 -> -> 0 `i `uc ]
+"73
+[; ;SSD.c: 73:          tByte index = 0;
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 0 `i `uc ]
+"77
+[; ;SSD.c: 77:         for(index = ssd_minute_units; index < (4); index++){
+{
+[e = _index -> . `E15 0 `uc ]
+[e $ < -> _index `i -> 4 `i 103  ]
+[e $U 104  ]
+[e :U 103 ]
+{
+"78
+[; ;SSD.c: 78:             ssd_off(index);
+[e ( _ssd_off (1 -> _index `E15 ]
+"79
+[; ;SSD.c: 79:         }
+}
+[e ++ _index -> -> 1 `i `uc ]
+[e $ < -> _index `i -> 4 `i 103  ]
+[e :U 104 ]
+}
+"82
+[; ;SSD.c: 82:         ssd_display(current_ssd,ssd_data[current_ssd].symbol);
+[e ( _ssd_display (2 , _current_ssd . *U + &U _ssd_data * -> _current_ssd `ux -> -> # *U &U _ssd_data `ui `ux 5 ]
+"87
+[; ;SSD.c: 87:         ssd_on(current_ssd);
+[e ( _ssd_on (1 _current_ssd ]
+"91
+[; ;SSD.c: 91:         current_ssd++;
+[e ++ _current_ssd -> -> 1 `i `E15 ]
+"92
+[; ;SSD.c: 92:         current_ssd = current_ssd % (4);
+[e = _current_ssd -> % -> _current_ssd `ui -> -> 4 `i `ui `E15 ]
+"94
+[; ;SSD.c: 94:     }else {
+}
+[e $U 106  ]
+[e :U 102 ]
+{
+"96
+[; ;SSD.c: 96:     }
+}
+[e :U 106 ]
+"98
+[; ;SSD.c: 98: }
+[e :UE 101 ]
+}
+"100
+[; ;SSD.c: 100: static void ssd_schematic_init(void){
+[v _ssd_schematic_init `(v ~T0 @X0 1 sf ]
+{
+[e :U _ssd_schematic_init ]
+[f ]
+[v F933 `S97 ~T0 @X0 1 s ]
+[i F933
+:U ..
+:U ..
+-> &U . *U -> -> 136 `i `*VS95 0 `*uc
+-> &U . *U -> -> 8 `i `*VS95 0 `*uc
+-> &U . *U -> -> 134 `i `*VS95 0 `*uc
+-> &U . *U -> -> 6 `i `*VS95 0 `*uc
+-> -> 4 `i `uc
+. `E2 10
+..
+..
+]
+"103
+[; ;SSD.c: 103:      ssd_data[0] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((4)),SSD_NULL};
+[v F934 `S97 ~T0 @X0 1 a ]
+[v F935 `S97 ~T0 @X0 1 s ]
+[i F935
+:U ..
+:U ..
+-> &U . *U -> -> 136 `i `*VS95 0 `*uc
+-> &U . *U -> -> 8 `i `*VS95 0 `*uc
+-> &U . *U -> -> 134 `i `*VS95 0 `*uc
+-> &U . *U -> -> 6 `i `*VS95 0 `*uc
+-> -> 5 `i `uc
+. `E2 10
+..
+..
+]
+"104
+[; ;SSD.c: 104:      ssd_data[1] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((5)),SSD_NULL};
+[v F936 `S97 ~T0 @X0 1 a ]
+[v F937 `S97 ~T0 @X0 1 s ]
+[i F937
+:U ..
+:U ..
+-> &U . *U -> -> 136 `i `*VS95 0 `*uc
+-> &U . *U -> -> 8 `i `*VS95 0 `*uc
+-> &U . *U -> -> 134 `i `*VS95 0 `*uc
+-> &U . *U -> -> 6 `i `*VS95 0 `*uc
+-> -> 6 `i `uc
+. `E2 10
+..
+..
+]
+"105
+[; ;SSD.c: 105:      ssd_data[2] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((6)),SSD_NULL};
+[v F938 `S97 ~T0 @X0 1 a ]
+[v F939 `S97 ~T0 @X0 1 s ]
+[i F939
+:U ..
+:U ..
+-> &U . *U -> -> 136 `i `*VS95 0 `*uc
+-> &U . *U -> -> 8 `i `*VS95 0 `*uc
+-> &U . *U -> -> 134 `i `*VS95 0 `*uc
+-> &U . *U -> -> 6 `i `*VS95 0 `*uc
+-> -> 7 `i `uc
+. `E2 10
+..
+..
+]
+"106
+[; ;SSD.c: 106:      ssd_data[3] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((7)),SSD_NULL};
+[v F940 `S97 ~T0 @X0 1 a ]
+"103
+[; ;SSD.c: 103:      ssd_data[0] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((4)),SSD_NULL};
+[e = *U + &U _ssd_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _ssd_data `ui `ux ; = F934 F933 F934 ]
+"104
+[; ;SSD.c: 104:      ssd_data[1] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((5)),SSD_NULL};
+[e = *U + &U _ssd_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _ssd_data `ui `ux ; = F936 F935 F936 ]
+"105
+[; ;SSD.c: 105:      ssd_data[2] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((6)),SSD_NULL};
+[e = *U + &U _ssd_data * -> -> -> 2 `i `ui `ux -> -> # *U &U _ssd_data `ui `ux ; = F938 F937 F938 ]
+"106
+[; ;SSD.c: 106:      ssd_data[3] = (tSSD_INFO){&(((*((volatile tRegister *)(0x88))).Reg)),&(((*((volatile tRegister *)(0x08))).Reg)),&(((*((volatile tRegister *)(0x86))).Reg)),&(((*((volatile tRegister *)(0x06))).Reg)),((7)),SSD_NULL};
+[e = *U + &U _ssd_data * -> -> -> 3 `i `ui `ux -> -> # *U &U _ssd_data `ui `ux ; = F940 F939 F940 ]
+"109
+[; ;SSD.c: 109: }
+[e :UE 107 ]
+}
+"110
+[; ;SSD.c: 110:  void ssd_display(tSSD ssd, tSSD_SYMBOL symbol){
+[v _ssd_display `(v ~T0 @X0 1 ef2`E15`E2 ]
+{
+[e :U _ssd_display ]
+[v _ssd `E15 ~T0 @X0 1 r1 ]
+[v _symbol `E2 ~T0 @X0 1 r2 ]
+[f ]
+"111
+[; ;SSD.c: 111:     ((*(ssd_data[ssd].data_value_reg)) = (ssd_decoder[symbol]));
+[e = *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 1 *U + &U _ssd_decoder * -> _symbol `ux -> -> # *U &U _ssd_decoder `ui `ux ]
+"112
+[; ;SSD.c: 112:     if(ssd == ssd_hour_units) {
+[e $ ! == -> _ssd `ui -> . `E15 2 `ui 109  ]
+{
+"113
+[; ;SSD.c: 113:         dot_display(dot_state);
+[e ( _dot_display (1 _dot_state ]
+"114
+[; ;SSD.c: 114:     }else {
+}
+[e $U 110  ]
+[e :U 109 ]
+{
+"116
+[; ;SSD.c: 116:     }
+}
+[e :U 110 ]
+"117
+[; ;SSD.c: 117: }
+[e :UE 108 ]
+}
+"119
+[; ;SSD.c: 119: static void ssd_on (tSSD ssd){
+[v _ssd_on `(v ~T0 @X0 1 sf1`E15 ]
+{
+[e :U _ssd_on ]
+[v _ssd `E15 ~T0 @X0 1 r1 ]
+[f ]
+"120
+[; ;SSD.c: 120:     (((*(ssd_data[ssd].ctrl_value_reg)) = ((*(ssd_data[ssd].ctrl_value_reg) & (~(1 << ssd_data[ssd].ctrl_pin))) | (((1)) << ssd_data[ssd].ctrl_pin))));
+[e = *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 3 -> | & -> *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 3 `i ~ << -> 1 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i << -> 1 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i `uc ]
+"121
+[; ;SSD.c: 121: }
+[e :UE 111 ]
+}
+"123
+[; ;SSD.c: 123: static void ssd_off(tSSD ssd){
+[v _ssd_off `(v ~T0 @X0 1 sf1`E15 ]
+{
+[e :U _ssd_off ]
+[v _ssd `E15 ~T0 @X0 1 r1 ]
+[f ]
+"124
+[; ;SSD.c: 124:     (((*(ssd_data[ssd].ctrl_value_reg)) = ((*(ssd_data[ssd].ctrl_value_reg) & (~(1 << ssd_data[ssd].ctrl_pin))) | (((0)) << ssd_data[ssd].ctrl_pin))));
+[e = *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 3 -> | & -> *U . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 3 `i ~ << -> 1 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i << -> 0 `i -> . *U + &U _ssd_data * -> _ssd `ux -> -> # *U &U _ssd_data `ui `ux 4 `i `uc ]
+"125
+[; ;SSD.c: 125: }
+[e :UE 112 ]
+}
+"127
+[; ;SSD.c: 127: void ssdDot_setState(tDotState state){
+[v _ssdDot_setState `(v ~T0 @X0 1 ef1`E21 ]
+{
+[e :U _ssdDot_setState ]
+[v _state `E21 ~T0 @X0 1 r1 ]
+[f ]
+"128
+[; ;SSD.c: 128:     dot_state = state;
+[e = _dot_state _state ]
+"129
+[; ;SSD.c: 129: }
+[e :UE 113 ]
+}
+"130
+[; ;SSD.c: 130: tDotState ssdDot_getState(){
+[v _ssdDot_getState `(E21 ~T0 @X0 1 ef ]
+{
+[e :U _ssdDot_getState ]
+[f ]
+"131
+[; ;SSD.c: 131:     return dot_state;
+[e ) _dot_state ]
+[e $UE 114  ]
+"132
+[; ;SSD.c: 132: }
+[e :UE 114 ]
+}
+"134
+[; ;SSD.c: 134: static void dot_display(tDotState state){
+[v _dot_display `(v ~T0 @X0 1 sf1`E21 ]
+{
+[e :U _dot_display ]
+[v _state `E21 ~T0 @X0 1 r1 ]
+[f ]
+"135
+[; ;SSD.c: 135:     (((*(ssd_data[ssd_hour_units].data_value_reg)) = ((*(ssd_data[ssd_hour_units].data_value_reg) & (~(1 << ((7))))) | (state << ((7))))));
+[e = *U . *U + &U _ssd_data * -> . `E15 2 `ux -> -> # *U &U _ssd_data `ui `ux 1 -> | -> & -> *U . *U + &U _ssd_data * -> . `E15 2 `ux -> -> # *U &U _ssd_data `ui `ux 1 `i ~ << -> 1 `i -> 7 `i `ui << -> _state `ui -> 7 `i `uc ]
+"136
+[; ;SSD.c: 136: }
+[e :UE 115 ]
+}

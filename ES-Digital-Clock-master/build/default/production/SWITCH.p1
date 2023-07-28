@@ -1,0 +1,480 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"26 SWITCH.c
+[; ;SWITCH.c: 26: static tSwitch_Info switches_data[(3)];
+[c E871 0 1 2 3 .. ]
+[n E871 . sw_released sw_prepressed sw_pressed sw_prereleased  ]
+"18
+[; ;SWITCH.c: 18: typedef struct {
+[s S97 `*Vuc 1 `*Vuc 1 `uc 1 `uc -> 2 `i `E871 1 ]
+[n S97 . ctrl_reg data_reg pin_number samples state ]
+"31
+[; ;SWITCH.c: 31: void switch_init(tSwitch sw){
+[c E866 0 1 2 .. ]
+[n E866 . sw_plus sw_minus sw_setting  ]
+"28
+[; ;SWITCH.c: 28: static void switches_Schematic_init(void);
+[v _switches_Schematic_init `(v ~T0 @X0 0 sf ]
+"31 ./MICRO_CONTROLLER.h
+[; ;./MICRO_CONTROLLER.h: 31:     struct{
+[s S96 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S96 . BIT0 BIT1 BIT2 BIT3 BIT4 BIT5 BIT6 BIT7 ]
+"29
+[; ;./MICRO_CONTROLLER.h: 29: typedef union {
+[u S95 `uc 1 `S96 1 ]
+[n S95 . Reg Bits ]
+"5 ./config.h
+[p x FOSC = HS ]
+"6
+[p x WDTE = OFF ]
+"7
+[p x PWRTE = ON ]
+"8
+[p x BOREN = ON ]
+"9
+[p x LVP = OFF ]
+"10
+[p x CPD = OFF ]
+"11
+[p x WRT = OFF ]
+"12
+[p x CP = OFF ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"26 SWITCH.c
+[; ;SWITCH.c: 26: static tSwitch_Info switches_data[(3)];
+[v _switches_data `S97 ~T0 @X0 -> 3 `i s ]
+"31
+[; ;SWITCH.c: 31: void switch_init(tSwitch sw){
+[v _switch_init `(v ~T0 @X0 1 ef1`E866 ]
+{
+[e :U _switch_init ]
+[v _sw `E866 ~T0 @X0 1 r1 ]
+[f ]
+"33
+[; ;SWITCH.c: 33:     tByte index = 0;
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 0 `i `uc ]
+"35
+[; ;SWITCH.c: 35:     switches_Schematic_init();
+[e ( _switches_Schematic_init ..  ]
+"38
+[; ;SWITCH.c: 38:     ((*(switches_data[sw].ctrl_reg)) = ((*(switches_data[sw].ctrl_reg) & (~(1 << switches_data[sw].pin_number))) | (((1)) << switches_data[sw].pin_number)));
+[e = *U . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 0 -> | & -> *U . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 0 `i ~ << -> 1 `i -> . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 2 `i << -> 1 `i -> . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 2 `i `uc ]
+"42
+[; ;SWITCH.c: 42:     for (index = 0; index < (2);index++){
+{
+[e = _index -> -> 0 `i `uc ]
+[e $ < -> _index `i -> 2 `i 99  ]
+[e $U 100  ]
+[e :U 99 ]
+{
+"44
+[; ;SWITCH.c: 44:         switches_data[sw].samples[index] = ((1));
+[e = *U + &U . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 3 * -> _index `ux -> -> # *U &U . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux -> -> 1 `i `uc ]
+"45
+[; ;SWITCH.c: 45:     }
+}
+[e ++ _index -> -> 1 `i `uc ]
+[e $ < -> _index `i -> 2 `i 99  ]
+[e :U 100 ]
+}
+"47
+[; ;SWITCH.c: 47:     switches_data[sw].state = sw_released;
+[e = . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 4 . `E871 0 ]
+"48
+[; ;SWITCH.c: 48: }
+[e :UE 98 ]
+}
+"50
+[; ;SWITCH.c: 50: tSw_State switch_getState(tSwitch sw){
+[v _switch_getState `(E871 ~T0 @X0 1 ef1`E866 ]
+{
+[e :U _switch_getState ]
+[v _sw `E866 ~T0 @X0 1 r1 ]
+[f ]
+"52
+[; ;SWITCH.c: 52:     tSw_State ret;
+[v _ret `E871 ~T0 @X0 1 a ]
+"54
+[; ;SWITCH.c: 54:     ret = switches_data[sw].state;
+[e = _ret . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 4 ]
+"56
+[; ;SWITCH.c: 56:     return ret;
+[e ) _ret ]
+[e $UE 102  ]
+"58
+[; ;SWITCH.c: 58: }
+[e :UE 102 ]
+}
+"59
+[; ;SWITCH.c: 59: void switch_setState(tSwitch sw ,tSw_State state){
+[v _switch_setState `(v ~T0 @X0 1 ef2`E866`E871 ]
+{
+[e :U _switch_setState ]
+[v _sw `E866 ~T0 @X0 1 r1 ]
+[v _state `E871 ~T0 @X0 1 r2 ]
+[f ]
+"61
+[; ;SWITCH.c: 61:     switches_data[sw].state = state;
+[e = . *U + &U _switches_data * -> _sw `ux -> -> # *U &U _switches_data `ui `ux 4 _state ]
+"62
+[; ;SWITCH.c: 62: }
+[e :UE 103 ]
+}
+"64
+[; ;SWITCH.c: 64: void switch_update(void){
+[v _switch_update `(v ~T0 @X0 1 ef ]
+{
+[e :U _switch_update ]
+[f ]
+"66
+[; ;SWITCH.c: 66:     static tByte sw_update_counter = 0;
+[v F904 `uc ~T0 @X0 1 s sw_update_counter ]
+[i F904
+-> -> 0 `i `uc
+]
+"67
+[; ;SWITCH.c: 67:     tByte sw_index = 0;
+[v _sw_index `uc ~T0 @X0 1 a ]
+[e = _sw_index -> -> 0 `i `uc ]
+"68
+[; ;SWITCH.c: 68:     tByte sample_index = 0;
+[v _sample_index `uc ~T0 @X0 1 a ]
+[e = _sample_index -> -> 0 `i `uc ]
+"69
+[; ;SWITCH.c: 69:     sw_update_counter = sw_update_counter + (5);
+[e = F904 -> + -> F904 `i -> 5 `i `uc ]
+"73
+[; ;SWITCH.c: 73:     if(sw_update_counter == (20)){
+[e $ ! == -> F904 `i -> 20 `i 105  ]
+{
+"75
+[; ;SWITCH.c: 75:         sw_update_counter = 0;
+[e = F904 -> -> 0 `i `uc ]
+"77
+[; ;SWITCH.c: 77:         for(sw_index = sw_plus; sw_index < (3); sw_index++){
+{
+[e = _sw_index -> . `E866 0 `uc ]
+[e $ < -> _sw_index `i -> 3 `i 106  ]
+[e $U 107  ]
+[e :U 106 ]
+{
+"80
+[; ;SWITCH.c: 80:             for(sample_index = 0; sample_index < (2) - 1; sample_index++){
+{
+[e = _sample_index -> -> 0 `i `uc ]
+[e $ < -> _sample_index `i - -> 2 `i -> 1 `i 109  ]
+[e $U 110  ]
+[e :U 109 ]
+{
+"81
+[; ;SWITCH.c: 81:                 switches_data[sw_index].samples[sample_index] = switches_data[sw_index].samples[sample_index + 1];
+[e = *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> _sample_index `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> + -> _sample_index `i -> 1 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux ]
+"82
+[; ;SWITCH.c: 82:             }
+}
+[e ++ _sample_index -> -> 1 `i `uc ]
+[e $ < -> _sample_index `i - -> 2 `i -> 1 `i 109  ]
+[e :U 110 ]
+}
+"85
+[; ;SWITCH.c: 85:             switches_data[sw_index].samples[(2) - 1] = ((*(switches_data[sw_index].data_reg) >> switches_data[sw_index].pin_number) & (1));
+[e = *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> - -> 2 `i -> 1 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux -> & >> -> *U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 1 `i -> . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 2 `i -> 1 `i `uc ]
+"90
+[; ;SWITCH.c: 90:             if(switches_data[sw_index].state == sw_released &&
+[e $ ! && && == -> . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 `ui -> . `E871 0 `ui == -> *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> - -> 2 `i -> 2 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux `i -> 0 `i == -> *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> - -> 2 `i -> 1 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux `i -> 0 `i 112  ]
+"94
+[; ;SWITCH.c: 94:             {
+{
+"95
+[; ;SWITCH.c: 95:                 switches_data[sw_index].state = sw_prepressed;
+[e = . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 . `E871 1 ]
+"96
+[; ;SWITCH.c: 96:             }
+}
+[e $U 113  ]
+"98
+[; ;SWITCH.c: 98:             else if(switches_data[sw_index].state == sw_prepressed && switches_data[sw_index].samples[(2) - 1] == ((0)))
+[e :U 112 ]
+[e $ ! && == -> . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 `ui -> . `E871 1 `ui == -> *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> - -> 2 `i -> 1 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux `i -> 0 `i 114  ]
+"99
+[; ;SWITCH.c: 99:             {
+{
+"100
+[; ;SWITCH.c: 100:                 switches_data[sw_index].state = sw_pressed;
+[e = . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 . `E871 2 ]
+"101
+[; ;SWITCH.c: 101:             }
+}
+[e $U 115  ]
+"103
+[; ;SWITCH.c: 103:             else if(switches_data[sw_index].state == sw_pressed &&
+[e :U 114 ]
+[e $ ! && && == -> . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 `ui -> . `E871 2 `ui == -> *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> - -> 2 `i -> 2 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux `i -> 1 `i == -> *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> - -> 2 `i -> 1 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux `i -> 1 `i 116  ]
+"107
+[; ;SWITCH.c: 107:                    {
+{
+"108
+[; ;SWITCH.c: 108:                         switches_data[sw_index].state = sw_prereleased;
+[e = . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 . `E871 3 ]
+"109
+[; ;SWITCH.c: 109:                    }
+}
+[e $U 117  ]
+"111
+[; ;SWITCH.c: 111:             else if(switches_data[sw_index].state == sw_prereleased && switches_data[sw_index].samples[(2) - 1] == ((1)))
+[e :U 116 ]
+[e $ ! && == -> . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 `ui -> . `E871 3 `ui == -> *U + &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 * -> -> - -> 2 `i -> 1 `i `ui `ux -> -> # *U &U . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 3 `ui `ux `i -> 1 `i 118  ]
+"112
+[; ;SWITCH.c: 112:             {
+{
+"113
+[; ;SWITCH.c: 113:                 switches_data[sw_index].state = sw_released;
+[e = . *U + &U _switches_data * -> _sw_index `ux -> -> # *U &U _switches_data `ui `ux 4 . `E871 0 ]
+"114
+[; ;SWITCH.c: 114:             }else { }
+}
+[e $U 119  ]
+[e :U 118 ]
+{
+}
+[e :U 119 ]
+[e :U 117 ]
+[e :U 115 ]
+[e :U 113 ]
+"116
+[; ;SWITCH.c: 116:         }
+}
+[e ++ _sw_index -> -> 1 `i `uc ]
+[e $ < -> _sw_index `i -> 3 `i 106  ]
+[e :U 107 ]
+}
+"118
+[; ;SWITCH.c: 118:     }else {
+}
+[e $U 120  ]
+[e :U 105 ]
+{
+"120
+[; ;SWITCH.c: 120:     }
+}
+[e :U 120 ]
+"121
+[; ;SWITCH.c: 121: }
+[e :UE 104 ]
+}
+"123
+[; ;SWITCH.c: 123: static void switches_Schematic_init(void){
+[v _switches_Schematic_init `(v ~T0 @X0 1 sf ]
+{
+[e :U _switches_Schematic_init ]
+[f ]
+"127
+[; ;SWITCH.c: 127:     switches_data[sw_plus].ctrl_reg = &(((*((volatile tRegister *)(0x86))).Reg));
+[e = . *U + &U _switches_data * -> . `E866 0 `ux -> -> # *U &U _switches_data `ui `ux 0 &U . *U -> -> 134 `i `*VS95 0 ]
+"128
+[; ;SWITCH.c: 128:     switches_data[sw_plus].data_reg = &(((*((volatile tRegister *)(0x06))).Reg));
+[e = . *U + &U _switches_data * -> . `E866 0 `ux -> -> # *U &U _switches_data `ui `ux 1 &U . *U -> -> 6 `i `*VS95 0 ]
+"129
+[; ;SWITCH.c: 129:     switches_data[sw_plus].pin_number = ((0));
+[e = . *U + &U _switches_data * -> . `E866 0 `ux -> -> # *U &U _switches_data `ui `ux 2 -> -> 0 `i `uc ]
+"133
+[; ;SWITCH.c: 133:     switches_data[sw_minus].ctrl_reg = &(((*((volatile tRegister *)(0x86))).Reg));
+[e = . *U + &U _switches_data * -> . `E866 1 `ux -> -> # *U &U _switches_data `ui `ux 0 &U . *U -> -> 134 `i `*VS95 0 ]
+"134
+[; ;SWITCH.c: 134:     switches_data[sw_minus].data_reg = &(((*((volatile tRegister *)(0x06))).Reg));
+[e = . *U + &U _switches_data * -> . `E866 1 `ux -> -> # *U &U _switches_data `ui `ux 1 &U . *U -> -> 6 `i `*VS95 0 ]
+"135
+[; ;SWITCH.c: 135:     switches_data[sw_minus].pin_number = ((1));
+[e = . *U + &U _switches_data * -> . `E866 1 `ux -> -> # *U &U _switches_data `ui `ux 2 -> -> 1 `i `uc ]
+"139
+[; ;SWITCH.c: 139:     switches_data[sw_setting].ctrl_reg = &(((*((volatile tRegister *)(0x86))).Reg));
+[e = . *U + &U _switches_data * -> . `E866 2 `ux -> -> # *U &U _switches_data `ui `ux 0 &U . *U -> -> 134 `i `*VS95 0 ]
+"140
+[; ;SWITCH.c: 140:     switches_data[sw_setting].data_reg = &(((*((volatile tRegister *)(0x06))).Reg));
+[e = . *U + &U _switches_data * -> . `E866 2 `ux -> -> # *U &U _switches_data `ui `ux 1 &U . *U -> -> 6 `i `*VS95 0 ]
+"141
+[; ;SWITCH.c: 141:     switches_data[sw_setting].pin_number = ((2));
+[e = . *U + &U _switches_data * -> . `E866 2 `ux -> -> # *U &U _switches_data `ui `ux 2 -> -> 2 `i `uc ]
+"143
+[; ;SWITCH.c: 143: }
+[e :UE 121 ]
+}

@@ -1,0 +1,686 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"26 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SWITCH.c
+[e E871 . `uc
+sw_released 0
+sw_prepressed 1
+sw_pressed 2
+sw_prereleased 3
+]
+"31
+[e E866 . `uc
+sw_plus 0
+sw_minus 1
+sw_setting 2
+]
+"21 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\my_stop_watch.c
+[e E850 . `uc
+sw_plus 0
+sw_minus 1
+sw_setting 2
+]
+"24
+[e E940 . `uc
+T0_PRESCALLER_2 0
+T0_PRESCALLER_4 1
+T0_PRESCALLER_8 2
+T0_PRESCALLER_16 3
+T0_PRESCALLER_32 4
+T0_PRESCALLER_64 5
+T0_PRESCALLER_128 6
+T0_PRESCALLER_256 7
+]
+[e E950 . `uc
+T0_TIMER_MODE 0
+T0_COUNTER_MODE 1
+]
+[e E958 . `uc
+T0_OVF_ENABLE 0
+T0_OVF_DISABLE 1
+]
+"26
+[e E954 . `uc
+T0_ON 0
+T0_OFF 1
+]
+"26 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[e E2 . `uc
+SSD_0 0
+SSD_1 1
+SSD_2 2
+SSD_3 3
+SSD_4 4
+SSD_5 5
+SSD_6 6
+SSD_7 7
+SSD_8 8
+SSD_9 9
+SSD_NULL 10
+]
+"27
+[e E15 . `uc
+ssd_minute_units 0
+ssd_minute_tens 1
+ssd_hour_units 2
+ssd_hour_tens 3
+]
+"28
+[e E21 . `uc
+DOT_OFF 0
+DOT_ON 1
+]
+"16 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[e E871 . `uc
+MODE_NORMAL 0
+MODE_ADJUST_MINUTES 1
+MODE_ADJUST_HOURS 2
+]
+"82
+[e E882 . `uc
+sw_plus 0
+sw_minus 1
+sw_setting 2
+]
+"88
+[e E887 . `uc
+sw_released 0
+sw_prepressed 1
+sw_pressed 2
+sw_prereleased 3
+]
+"10 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\DISPLAY.c
+[e E871 . `uc
+MODE_NORMAL 0
+MODE_ADJUST_MINUTES 1
+MODE_ADJUST_HOURS 2
+]
+"22
+[e E895 . `uc
+ssd_minute_units 0
+ssd_minute_tens 1
+ssd_hour_units 2
+ssd_hour_tens 3
+]
+"27
+[e E882 . `uc
+SSD_0 0
+SSD_1 1
+SSD_2 2
+SSD_3 3
+SSD_4 4
+SSD_5 5
+SSD_6 6
+SSD_7 7
+SSD_8 8
+SSD_9 9
+SSD_NULL 10
+]
+"31
+[e E901 . `uc
+DOT_OFF 0
+DOT_ON 1
+]
+"8 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIMER0.c
+[e E866 . `uc
+T0_PRESCALLER_2 0
+T0_PRESCALLER_4 1
+T0_PRESCALLER_8 2
+T0_PRESCALLER_16 3
+T0_PRESCALLER_32 4
+T0_PRESCALLER_64 5
+T0_PRESCALLER_128 6
+T0_PRESCALLER_256 7
+]
+[e E876 . `uc
+T0_TIMER_MODE 0
+T0_COUNTER_MODE 1
+]
+[e E884 . `uc
+T0_OVF_ENABLE 0
+T0_OVF_DISABLE 1
+]
+"17
+[e E880 . `uc
+T0_ON 0
+T0_OFF 1
+]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+[v i1___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"18 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\DISPLAY.c
+[v _display_init display_init `(v  1 e 1 0 ]
+"34
+[v _display_update display_update `(v  1 e 1 0 ]
+"80
+[v _normal_mode_display normal_mode_display `(v  1 s 1 normal_mode_display ]
+"92
+[v _adjust_hours_mode_display adjust_hours_mode_display `(v  1 s 1 adjust_hours_mode_display ]
+"110
+[v _adjust_minutes_mode_display adjust_minutes_mode_display `(v  1 s 1 adjust_minutes_mode_display ]
+"16 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\my_stop_watch.c
+[v _main main `(v  1 e 1 0 ]
+"39
+[v _APP_UPDATE APP_UPDATE `II(v  1 e 1 0 ]
+"44 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v _ssd_init ssd_init `(v  1 e 1 0 ]
+"58
+[v _ssd_setSymbol ssd_setSymbol `(v  1 e 1 0 ]
+[v i1_ssd_setSymbol ssd_setSymbol `(v  1 e 1 0 ]
+"61
+[v _ssd_getSymbol ssd_getSymbol `(E2  1 e 1 0 ]
+"65
+[v _ssd_update ssd_update `(v  1 e 1 0 ]
+"100
+[v _ssd_schematic_init ssd_schematic_init `(v  1 s 1 ssd_schematic_init ]
+"110
+[v _ssd_display ssd_display `(v  1 e 1 0 ]
+[v i1_ssd_display ssd_display `(v  1 e 1 0 ]
+"119
+[v _ssd_on ssd_on `(v  1 s 1 ssd_on ]
+"123
+[v _ssd_off ssd_off `(v  1 s 1 ssd_off ]
+"127
+[v _ssdDot_setState ssdDot_setState `(v  1 e 1 0 ]
+[v i1_ssdDot_setState ssdDot_setState `(v  1 e 1 0 ]
+"130
+[v _ssdDot_getState ssdDot_getState `(E21  1 e 1 0 ]
+"134
+[v _dot_display dot_display `(v  1 s 1 dot_display ]
+[v i1_dot_display dot_display `(v  1 s 1 i1_dot_display ]
+"31 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SWITCH.c
+[v _switch_init switch_init `(v  1 e 1 0 ]
+"50
+[v _switch_getState switch_getState `(E871  1 e 1 0 ]
+"64
+[v _switch_update switch_update `(v  1 e 1 0 ]
+"123
+[v _switches_Schematic_init switches_Schematic_init `(v  1 s 1 switches_Schematic_init ]
+"28 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v _time_init time_init `(v  1 e 1 0 ]
+"43
+[v _get_time get_time `(v  1 e 1 0 ]
+[v i1_get_time get_time `(v  1 e 1 0 ]
+"54
+[v _get_mode get_mode `(v  1 e 1 0 ]
+"60
+[v _time_update time_update `(v  1 e 1 0 ]
+"125
+[v _sw_plus_handler sw_plus_handler `(v  1 s 1 sw_plus_handler ]
+"142
+[v _sw_minus_handler sw_minus_handler `(v  1 s 1 sw_minus_handler ]
+"161
+[v _sw_setting_handler sw_setting_handler `(v  1 s 1 sw_setting_handler ]
+"194
+[v _update_current_time update_current_time `(v  1 s 1 update_current_time ]
+"8 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIMER0.c
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+"31
+[v _timer0_reload timer0_reload `(v  1 e 1 0 ]
+[v i1_timer0_reload timer0_reload `(v  1 e 1 0 ]
+"39
+[v _T0_timer_mode_state T0_timer_mode_state `(v  1 e 1 0 ]
+"54
+[v _T0_counter_mode_state T0_counter_mode_state `(v  1 e 1 0 ]
+"70
+[v _timer0_set_prescaller timer0_set_prescaller `(v  1 s 1 timer0_set_prescaller ]
+"103
+[v _timer0_set_mode timer0_set_mode `(v  1 s 1 timer0_set_mode ]
+"118
+[v _timer0_ovf_setState timer0_ovf_setState `(v  1 s 1 timer0_ovf_setState ]
+[s S349 . 3 `uc 1 secounds 1 0 `uc 1 minutes 1 1 `uc 1 hours 1 2 ]
+"9 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\DISPLAY.c
+[v _display_time display_time `S349  1 s 3 display_time ]
+"10
+[v _display_mode display_mode `E871  1 s 1 display_mode ]
+"11
+[v _dot_blink_counter dot_blink_counter `us  1 s 2 dot_blink_counter ]
+"12
+[v _mode_blink_counter mode_blink_counter `us  1 s 2 mode_blink_counter ]
+[s S173 . 10 `*.39uc 1 data_direction_reg 2 0 `*.39uc 1 data_value_reg 2 2 `*.39uc 1 ctrl_direction_reg 2 4 `*.39uc 1 ctrl_value_reg 2 6 `uc 1 ctrl_pin 1 8 `E2 1 symbol 1 9 ]
+"26 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v _ssd_data ssd_data `[4]S173  1 s 40 ssd_data ]
+"27
+[v _current_ssd current_ssd `E15  1 s 1 current_ssd ]
+"28
+[v _dot_state dot_state `E21  1 s 1 dot_state ]
+"31
+[v _ssd_decoder ssd_decoder `[11]uc  1 s 11 ssd_decoder ]
+[s S27 . 8 `*.39VEuc 1 ctrl_reg 2 0 `*.39VEuc 1 data_reg 2 2 `uc 1 pin_number 1 4 `[2]uc 1 samples 2 5 `E871 1 state 1 7 ]
+"26 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SWITCH.c
+[v _switches_data switches_data `[3]S27  1 s 24 switches_data ]
+"15 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v _current_time current_time `S349  1 s 3 current_time ]
+"16
+[v _current_mode current_mode `E871  1 s 1 current_mode ]
+"17
+[v _current_sec_period current_sec_period `us  1 s 2 current_sec_period ]
+"16 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\my_stop_watch.c
+[v _main main `(v  1 e 1 0 ]
+{
+"37
+} 0
+"8 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIMER0.c
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+{
+[v timer0_init@p p `E866  1 a 1 wreg ]
+[v timer0_init@p p `E866  1 a 1 wreg ]
+[v timer0_init@m m `E876  1 p 1 18 ]
+[v timer0_init@o o `E884  1 p 1 19 ]
+[v timer0_init@p p `E866  1 a 1 22 ]
+"29
+} 0
+"70
+[v _timer0_set_prescaller timer0_set_prescaller `(v  1 s 1 timer0_set_prescaller ]
+{
+[v timer0_set_prescaller@p p `E866  1 a 1 wreg ]
+[v timer0_set_prescaller@p p `E866  1 a 1 wreg ]
+[v timer0_set_prescaller@p p `E866  1 a 1 17 ]
+"101
+} 0
+"103
+[v _timer0_set_mode timer0_set_mode `(v  1 s 1 timer0_set_mode ]
+{
+[v timer0_set_mode@m m `E876  1 a 1 wreg ]
+[v timer0_set_mode@m m `E876  1 a 1 wreg ]
+[v timer0_set_mode@m m `E876  1 a 1 17 ]
+"116
+} 0
+"31
+[v _timer0_reload timer0_reload `(v  1 e 1 0 ]
+{
+[v timer0_reload@val val `uc  1 a 1 wreg ]
+[v timer0_reload@val val `uc  1 a 1 wreg ]
+"33
+[v timer0_reload@val val `uc  1 a 1 16 ]
+"34
+} 0
+"118
+[v _timer0_ovf_setState timer0_ovf_setState `(v  1 s 1 timer0_ovf_setState ]
+{
+[v timer0_ovf_setState@o o `E884  1 a 1 wreg ]
+[v timer0_ovf_setState@o o `E884  1 a 1 wreg ]
+[v timer0_ovf_setState@o o `E884  1 a 1 17 ]
+"131
+} 0
+"39
+[v _T0_timer_mode_state T0_timer_mode_state `(v  1 e 1 0 ]
+{
+[v T0_timer_mode_state@s s `E880  1 a 1 wreg ]
+[v T0_timer_mode_state@s s `E880  1 a 1 wreg ]
+[v T0_timer_mode_state@s s `E880  1 a 1 17 ]
+"52
+} 0
+"54
+[v _T0_counter_mode_state T0_counter_mode_state `(v  1 e 1 0 ]
+{
+[v T0_counter_mode_state@s s `E880  1 a 1 wreg ]
+[v T0_counter_mode_state@s s `E880  1 a 1 wreg ]
+[v T0_counter_mode_state@s s `E880  1 a 1 17 ]
+"68
+} 0
+"28 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v _time_init time_init `(v  1 e 1 0 ]
+{
+"41
+} 0
+"31 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SWITCH.c
+[v _switch_init switch_init `(v  1 e 1 0 ]
+{
+[v switch_init@sw sw `E866  1 a 1 wreg ]
+"33
+[v switch_init@index index `uc  1 a 1 28 ]
+"31
+[v switch_init@sw sw `E866  1 a 1 wreg ]
+[v switch_init@sw sw `E866  1 a 1 29 ]
+"48
+} 0
+"123
+[v _switches_Schematic_init switches_Schematic_init `(v  1 s 1 switches_Schematic_init ]
+{
+"143
+} 0
+"18 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\DISPLAY.c
+[v _display_init display_init `(v  1 e 1 0 ]
+{
+"32
+} 0
+"58 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v _ssd_setSymbol ssd_setSymbol `(v  1 e 1 0 ]
+{
+[v ssd_setSymbol@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_setSymbol@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_setSymbol@symbol symbol `E2  1 p 1 24 ]
+[v ssd_setSymbol@ssd ssd `E15  1 a 1 27 ]
+"60
+} 0
+"44
+[v _ssd_init ssd_init `(v  1 e 1 0 ]
+{
+[v ssd_init@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_init@ssd ssd `E15  1 a 1 wreg ]
+"46
+[v ssd_init@ssd ssd `E15  1 a 1 39 ]
+"57
+} 0
+"100
+[v _ssd_schematic_init ssd_schematic_init `(v  1 s 1 ssd_schematic_init ]
+{
+[s S173 . 10 `*.39uc 1 data_direction_reg 2 0 `*.39uc 1 data_value_reg 2 2 `*.39uc 1 ctrl_direction_reg 2 4 `*.39uc 1 ctrl_value_reg 2 6 `uc 1 ctrl_pin 1 8 `E2 1 symbol 1 9 ]
+"106
+[v ssd_schematic_init@940 F940 `S173  1 a 10 30 ]
+"105
+[v ssd_schematic_init@938 F938 `S173  1 a 10 20 ]
+"104
+[v ssd_schematic_init@936 F936 `S173  1 a 10 10 ]
+"103
+[v ssd_schematic_init@934 F934 `S173  1 a 10 0 ]
+"100
+[v ssd_schematic_init@F933 F933 `S173  1 s 10 F933 ]
+"103
+[v ssd_schematic_init@F935 F935 `S173  1 s 10 F935 ]
+"104
+[v ssd_schematic_init@F937 F937 `S173  1 s 10 F937 ]
+"105
+[v ssd_schematic_init@F939 F939 `S173  1 s 10 F939 ]
+"109
+} 0
+"110
+[v _ssd_display ssd_display `(v  1 e 1 0 ]
+{
+[v ssd_display@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_display@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_display@symbol symbol `E2  1 p 1 19 ]
+[v ssd_display@ssd ssd `E15  1 a 1 24 ]
+"117
+} 0
+"134
+[v _dot_display dot_display `(v  1 s 1 dot_display ]
+{
+[v dot_display@state state `E21  1 a 1 wreg ]
+[v dot_display@state state `E21  1 a 1 wreg ]
+[v dot_display@state state `E21  1 a 1 17 ]
+"136
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 17 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 15 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 18 ]
+"51
+} 0
+"127 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v _ssdDot_setState ssdDot_setState `(v  1 e 1 0 ]
+{
+[v ssdDot_setState@state state `E21  1 a 1 wreg ]
+[v ssdDot_setState@state state `E21  1 a 1 wreg ]
+[v ssdDot_setState@state state `E21  1 a 1 16 ]
+"129
+} 0
+"43 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v _get_time get_time `(v  1 e 1 0 ]
+{
+[s S349 . 3 `uc 1 secounds 1 0 `uc 1 minutes 1 1 `uc 1 hours 1 2 ]
+[v get_time@time time `*.4S349  1 a 1 wreg ]
+[v get_time@time time `*.4S349  1 a 1 wreg ]
+"47
+"43
+[v get_time@time time `*.4S349  1 a 1 16 ]
+"53
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 21 ]
+[v ___awmod@counter counter `uc  1 a 1 20 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 15 ]
+[v ___awmod@dividend dividend `i  1 p 2 17 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 22 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 21 ]
+[v ___awdiv@counter counter `uc  1 a 1 20 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 15 ]
+[v ___awdiv@dividend dividend `i  1 p 2 17 ]
+"41
+} 0
+"39 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\my_stop_watch.c
+[v _APP_UPDATE APP_UPDATE `II(v  1 e 1 0 ]
+{
+"52
+} 0
+"31 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIMER0.c
+[v i1_timer0_reload timer0_reload `(v  1 e 1 0 ]
+{
+[v i1timer0_reload@val val `uc  1 a 1 wreg ]
+[v i1timer0_reload@val val `uc  1 a 1 wreg ]
+"33
+[v i1timer0_reload@val val `uc  1 a 1 1 ]
+"34
+} 0
+"60 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v _time_update time_update `(v  1 e 1 0 ]
+{
+"80
+[v time_update@index index `uc  1 a 1 12 ]
+"62
+[v time_update@current_period current_period `uc  1 s 1 current_period ]
+"120
+} 0
+"194
+[v _update_current_time update_current_time `(v  1 s 1 update_current_time ]
+{
+"213
+} 0
+"50 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SWITCH.c
+[v _switch_getState switch_getState `(E871  1 e 1 0 ]
+{
+[v switch_getState@sw sw `E866  1 a 1 wreg ]
+"52
+[v switch_getState@ret ret `E871  1 a 1 3 ]
+"50
+[v switch_getState@sw sw `E866  1 a 1 wreg ]
+"54
+[v switch_getState@sw sw `E866  1 a 1 2 ]
+"58
+} 0
+"161 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v _sw_setting_handler sw_setting_handler `(v  1 s 1 sw_setting_handler ]
+{
+"192
+} 0
+"125
+[v _sw_plus_handler sw_plus_handler `(v  1 s 1 sw_plus_handler ]
+{
+"140
+} 0
+"142
+[v _sw_minus_handler sw_minus_handler `(v  1 s 1 sw_minus_handler ]
+{
+"159
+} 0
+"64 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SWITCH.c
+[v _switch_update switch_update `(v  1 e 1 0 ]
+{
+"67
+[v switch_update@sw_index sw_index `uc  1 a 1 8 ]
+"68
+[v switch_update@sample_index sample_index `uc  1 a 1 7 ]
+"66
+[v switch_update@sw_update_counter sw_update_counter `uc  1 s 1 sw_update_counter ]
+"121
+} 0
+"65 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v _ssd_update ssd_update `(v  1 e 1 0 ]
+{
+"73
+[v ssd_update@index index `uc  1 a 1 13 ]
+"66
+[v ssd_update@ssd_update_counter ssd_update_counter `uc  1 s 1 ssd_update_counter ]
+"98
+} 0
+"110
+[v i1_ssd_display ssd_display `(v  1 e 1 0 ]
+{
+[v i1ssd_display@ssd ssd `E15  1 a 1 wreg ]
+[v i1ssd_display@ssd ssd `E15  1 a 1 wreg ]
+[v i1ssd_display@symbol symbol `E2  1 p 1 4 ]
+[v i1ssd_display@ssd ssd `E15  1 a 1 9 ]
+"117
+} 0
+"134
+[v i1_dot_display dot_display `(v  1 s 1 i1_dot_display ]
+{
+[v i1dot_display@state state `E21  1 a 1 wreg ]
+[v i1dot_display@state state `E21  1 a 1 wreg ]
+[v i1dot_display@state state `E21  1 a 1 2 ]
+"136
+} 0
+"119
+[v _ssd_on ssd_on `(v  1 s 1 ssd_on ]
+{
+[v ssd_on@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_on@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_on@ssd ssd `E15  1 a 1 4 ]
+"121
+} 0
+"123
+[v _ssd_off ssd_off `(v  1 s 1 ssd_off ]
+{
+[v ssd_off@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_off@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_off@ssd ssd `E15  1 a 1 4 ]
+"125
+} 0
+"34 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\DISPLAY.c
+[v _display_update display_update `(v  1 e 1 0 ]
+{
+"36
+[v display_update@current_disp_period current_disp_period `uc  1 s 1 current_disp_period ]
+"78
+} 0
+"43 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v i1_get_time get_time `(v  1 e 1 0 ]
+{
+[s S349 . 3 `uc 1 secounds 1 0 `uc 1 minutes 1 1 `uc 1 hours 1 2 ]
+[v i1get_time@time time `*.4S349  1 a 1 wreg ]
+[v i1get_time@time time `*.4S349  1 a 1 wreg ]
+"47
+"43
+[v i1get_time@time time `*.4S349  1 a 1 1 ]
+"53
+} 0
+"80 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\DISPLAY.c
+[v _normal_mode_display normal_mode_display `(v  1 s 1 normal_mode_display ]
+{
+"90
+} 0
+"130 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v _ssdDot_getState ssdDot_getState `(E21  1 e 1 0 ]
+{
+"132
+} 0
+"54 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\TIME.c
+[v _get_mode get_mode `(v  1 e 1 0 ]
+{
+[v get_mode@mode mode `*.4E871  1 a 1 wreg ]
+[v get_mode@mode mode `*.4E871  1 a 1 wreg ]
+"58
+[v get_mode@mode mode `*.4E871  1 a 1 1 ]
+"59
+} 0
+"110 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\DISPLAY.c
+[v _adjust_minutes_mode_display adjust_minutes_mode_display `(v  1 s 1 adjust_minutes_mode_display ]
+{
+"128
+} 0
+"92
+[v _adjust_hours_mode_display adjust_hours_mode_display `(v  1 s 1 adjust_hours_mode_display ]
+{
+"108
+} 0
+"58 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v i1_ssd_setSymbol ssd_setSymbol `(v  1 e 1 0 ]
+{
+[v i1ssd_setSymbol@ssd ssd `E15  1 a 1 wreg ]
+[v i1ssd_setSymbol@ssd ssd `E15  1 a 1 wreg ]
+[v i1ssd_setSymbol@symbol symbol `E2  1 p 1 9 ]
+[v i1ssd_setSymbol@ssd ssd `E15  1 a 1 12 ]
+"60
+} 0
+"127
+[v i1_ssdDot_setState ssdDot_setState `(v  1 e 1 0 ]
+{
+[v i1ssdDot_setState@state state `E21  1 a 1 wreg ]
+[v i1ssdDot_setState@state state `E21  1 a 1 wreg ]
+[v i1ssdDot_setState@state state `E21  1 a 1 1 ]
+"129
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+[v i1___awmod __awmod `(i  1 e 2 0 ]
+{
+[v i1___awmod@sign __awmod `uc  1 a 1 6 ]
+[v i1___awmod@counter __awmod `uc  1 a 1 5 ]
+[v i1___awmod@divisor divisor `i  1 p 2 0 ]
+[v i1___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+[v i1___awdiv __awdiv `(i  1 e 2 0 ]
+{
+[v i1___awdiv@quotient __awdiv `i  1 a 2 7 ]
+[v i1___awdiv@sign __awdiv `uc  1 a 1 6 ]
+[v i1___awdiv@counter __awdiv `uc  1 a 1 5 ]
+[v i1___awdiv@divisor divisor `i  1 p 2 0 ]
+[v i1___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"61 C:\Users\A7med.G.Ashour\MPLABXProjects\MyStopWatch.X\SSD.c
+[v _ssd_getSymbol ssd_getSymbol `(E2  1 e 1 0 ]
+{
+[v ssd_getSymbol@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_getSymbol@ssd ssd `E15  1 a 1 wreg ]
+[v ssd_getSymbol@ssd ssd `E15  1 a 1 5 ]
+"63
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+[v i1___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v i1___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v i1___bmul@product __bmul `uc  1 a 1 3 ]
+[v i1___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v i1___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v i1___bmul@multiplier multiplier `uc  1 a 1 2 ]
+"51
+} 0
