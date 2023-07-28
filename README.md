@@ -1,1 +1,1 @@
-# Projects-Based-on-ATMEGA32
+# Projects-Based-on-AVR_PIC
