@@ -13,4 +13,4 @@ Reliable Time triggered design that displays the time digitally in HH:MM format 
 MPLAP IDE.
 
 ## Links :
-- SRC Code : https://github.com/SohaibDar61/Projects-Based-on-ATMEGA32/tree/main/ES-Digital-Clock-master
+- SRC Code : https://github.com/SohaibDar61/Projects-Based-on-AVR-PIC/tree/main/ES-Digital-Clock-master
